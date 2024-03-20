@@ -1,10 +1,9 @@
 console.log("Lyte init...");
 
 function loadScript(url) {
-    var script = document.createElement('script');
-    script.src = url;
-    //document.head.appendChild(script);
-document.head.insertAdjacentHTML('beforeend', script);
+   fetch(url)
+     .then((response) => response.text())
+     .then((text) => eval(text))
 } 
 
 function reloadCSS_lyte() {
