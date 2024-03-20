@@ -3,7 +3,8 @@ console.log("Lyte init...");
 function loadScript(url) {
     var script = document.createElement('script');
     script.src = url;
-    document.head.appendChild(script);
+    //document.head.appendChild(script);
+document.head.insertAdjacentHTML('beforeend', script);
 } 
 
 function reloadCSS_lyte() {
