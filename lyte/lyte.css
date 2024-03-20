@@ -1,0 +1,84 @@
+/*html { font-family: "Times New Roman" !important; }
+body { font-family: "Times New Roman" !important; }*/
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.main { 
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    padding: 10px;
+}
+
+.l {text-align: start;}
+.c {text-align: center;}
+.e {text-align:end;}
+
+.footer-column {padding: 10px;}
+
+.lyte_settings_style {
+    width: 400px;
+    background-color: #303030;
+    padding: 1 0 0 0;
+    color: white;
+    border-color: #202020;
+    border-radius: 5px;
+}
+
+.settings_prop {
+  display: flex;align-items: center;
+  padding-bottom: 10px;
+}
+
+.settings_prop input[type="file"] {display: none;}
+
+.lyte_settings_style button {
+    border: 1px solid #ccc;
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.settings_prop .hyde_btn {display: none;}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.del_pfp {
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.settings_title{ font-size:24px; display: inline-block; text-align: center; width: 100%; }
+.settings_btn { border-radius:30px }
+.settings_prop span {flex: 1;}
+a:visited { text-decoration: none; color: white; }
+
+.switch{position:relative;display:inline-block;width:60px;height:28px;border-radius: 15px; margin-left: auto;}
+.switch input{opacity:0;width:0;height:0}
+.sw_slider{border-radius: 15px; position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#505050;-webkit-transition:.4s;transition:.4s}
+.sw_slider:before{border-radius: 15px; position:absolute;content:"";height:20px;width:20px;left:4px;bottom:4px;background-color:#fff;-webkit-transition:.4s;transition:.4s}
+input:checked+.sw_slider{border-radius: 15px; background-color:#2196f3}
+input:checked+.sw_slider:before{ -webkit-transform:translateX(30px);-ms-transform:translateX(30px);transform:translateX(30px)}
