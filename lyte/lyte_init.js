@@ -1,11 +1,8 @@
 console.log("Lyte init...");
 
-function loadScript(url) {
-    var script = document.createElement('script');
-    script.src = url;
-    document.head.appendChild(script);
-    //document.head.insertAdjacentHTML('beforeend', script);
-} 
+if (document.body.style.zoom) {
+	document.body.style.zoom = "1.0";
+}
 
 function loadAndInjectScripts(scriptUrls) {
     scriptUrls.forEach(url => {
