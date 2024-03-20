@@ -30,13 +30,45 @@ function loadScript(src) {
   });
 }
 
-document.head.appendChild(cssElement("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_slide.css"));
-document.head.appendChild(cssElement("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css"));
+var scriptUrl = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_init.js']
+
+function loadAndInjectStyles(cssUrls) {
+    cssUrls.forEach(url => {
+        fetch(url)
+            .then(response => response.text())
+            .then(cssText => {
+                const styleElement = document.createElement('style');
+                styleElement.textContent = cssText;
+                document.head.appendChild(styleElement);
+            })
+            .catch(error => console.error(`Error loading ${url}: ${error}`));
+    });
+}
+
+function loadAndInjectScripts(scriptUrls) {
+    scriptUrls.forEach(url => {
+        fetch(url)
+            .then(response => response.text())
+            .then(scriptText => {
+                const scriptElement = document.createElement('script');
+                scriptElement.textContent = scriptText;
+                document.head.appendChild(scriptElement);
+            })
+            .catch(error => console.error(`Error loading ${url}: ${error}`));
+    });
+}
+
+const cssUrls = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_slide.css', 'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css'];
+
+loadAndInjectStyles(cssUrls);
+//document.head.appendChild(cssElement("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_slide.css"));
+//document.head.appendChild(cssElement("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css"));
 
 (function() {
     'use strict';
     //document.body.childNodes[4].remove(); //remove img
-    loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_init.js").then(() => {
+    //loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_init.js").then(() => {
 
-    });
+    //});
+    loadAndInjectScripts(scriptUrl);
 })();
