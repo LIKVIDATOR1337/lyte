@@ -6,7 +6,7 @@ function fix_chrome() {
 	}
 }
 
-setIntervan(fix_chrome, 1000);
+setInterval(fix_chrome, 1000);
 
 function loadAndInjectScripts(scriptUrls) {
     scriptUrls.forEach(url => {
