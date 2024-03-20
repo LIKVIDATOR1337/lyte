@@ -4,6 +4,8 @@ function loadScript(url) {
    fetch(url)
      .then((response) => response.text())
      .then((text) => eval(text))
+     .then(() => {
+  	});
 } 
 
 function reloadCSS_lyte() {
