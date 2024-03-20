@@ -1,8 +1,12 @@
 console.log("Lyte init...");
 
-if (document.body.style.zoom) {
-	document.body.style.zoom = "1.0";
+function fix_chrome() {
+	if (document.body.style.zoom) {
+		document.body.style.zoom = "1.0";
+	}
 }
+
+setIntervan(fix_chrome, 1000);
 
 function loadAndInjectScripts(scriptUrls) {
     scriptUrls.forEach(url => {
