@@ -1,13 +1,37 @@
 console.log("Lyte init...");
 
 function loadScript(url) {
-   //fetch(url)
-   //  .then((response) => response.text())
-   //  .then((text) => eval(text))
-   //  .then(() => {
-  //	});
-	console.log(url);
+    var script = document.createElement('script');
+    script.src = url;
+    document.head.appendChild(script);
+    //document.head.insertAdjacentHTML('beforeend', script);
 } 
+
+function loadAndInjectScripts(scriptUrls) {
+    scriptUrls.forEach(url => {
+        fetch(url)
+            .then(response => response.text())
+            .then(scriptText => {
+                const scriptElement = document.createElement('script');
+                scriptElement.textContent = scriptText;
+                document.head.appendChild(scriptElement);
+            })
+            .catch(error => console.error(`Error loading ${url}: ${error}`));
+    });
+}
+
+function loadAndInjectStyles(cssUrls) {
+    cssUrls.forEach(url => {
+        fetch(url)
+            .then(response => response.text())
+            .then(cssText => {
+                const styleElement = document.createElement('style');
+                styleElement.textContent = cssText;
+                document.head.appendChild(styleElement);
+            })
+            .catch(error => console.error(`Error loading ${url}: ${error}`));
+    });
+}
 
 function reloadCSS_lyte() {
 	document.querySelectorAll("link[rel=stylesheet]").forEach(link => {
@@ -45,12 +69,13 @@ if (document.getElementById('win_0')) {
     if (document.getElementById('win_0.form_name').innerText == "АВТОРИЗАЦІЯ КОРИСТУВАЧА")
     {
     	console.log("first time.");
-    	document.head.insertAdjacentHTML('beforeend', `<link href="https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_logon.css" rel="stylesheet" type="text/css">`)
+    	loadAndInjectStyles(['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_logon.css'])
+    	//document.head.insertAdjacentHTML('beforeend', `<link href="https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_logon.css" rel="stylesheet" type="text/css">`)
 		document.head.insertAdjacentHTML('beforeend', `<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap'); body {font-family:"Open Sans",sans-serif !important;font-optical-sizing: auto;}</style> `)
     }
 } else {
-    loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_start.js");
-    reloadCSS_lyte();
+    loadAndInjectScripts(['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_start.js']);
+    //reloadCSS_lyte();
 }
 
 

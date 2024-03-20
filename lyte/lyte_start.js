@@ -5,10 +5,13 @@ var logo = document.querySelector('img[src="img/Caption_502.png"][style="width:7
 logo.remove();
 logo = undefined;
 
-loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_override.js");
-loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js");
-loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js");
-loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_nav.js");
+scripts = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_override.js',
+	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js',
+	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js']
+loadAndInjectScripts(scripts)
+// loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_override.js");
+// loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js");
+// loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js");
 
 var dbg_btn = `
 	<button onclick="modal.showModal()">Settings</button>
