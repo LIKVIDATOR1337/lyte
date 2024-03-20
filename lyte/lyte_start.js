@@ -5,10 +5,10 @@ var logo = document.querySelector('img[src="img/Caption_502.png"][style="width:7
 logo.remove();
 logo = undefined;
 
-loadScript("http://127.0.0.1:8000/res/lyte/lyte_override.js");
-loadScript("http://127.0.0.1:8000/res/lyte/lyte_test.js");
-loadScript("http://127.0.0.1:8000/res/lyte/lyte_welcome.js");
-loadScript("http://127.0.0.1:8000/res/lyte/lyte_nav.js");
+loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_override.js");
+loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js");
+loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js");
+loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_nav.js");
 
 var dbg_btn = `
 	<button onclick="modal.showModal()">Settings</button>
@@ -31,7 +31,7 @@ var index = `
 	        Resurrection Lyte - version ${__version__} : SNU TimeTable version ${cur_ver}
 	      </div>
 	      <div class="footer-column e">
-	        Get Updates: <a href="https://github.com/LIKVIDATOR1337/snutt-resurrection" target="_blank">GitHub</a>
+	        Get Updates: <a href="https://github.com/LIKVIDATOR1337/lyte" target="_blank">GitHub</a>
 	        ${debug_btn}
 	      </div>
 	</footer>

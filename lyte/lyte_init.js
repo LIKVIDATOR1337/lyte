@@ -42,11 +42,11 @@ if (document.getElementById('win_0')) {
     if (document.getElementById('win_0.form_name').innerText == "АВТОРИЗАЦІЯ КОРИСТУВАЧА")
     {
     	console.log("first time.");
-    	document.head.insertAdjacentHTML('beforeend', `<link href="http://127.0.0.1:8000/res/lyte/lyte_logon.css" rel="stylesheet" type="text/css">`)
+    	document.head.insertAdjacentHTML('beforeend', `<link href="https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_logon.css" rel="stylesheet" type="text/css">`)
 		document.head.insertAdjacentHTML('beforeend', `<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap'); body {font-family:"Open Sans",sans-serif !important;font-optical-sizing: auto;}</style> `)
     }
 } else {
-    loadScript("http://127.0.0.1:8000/res/lyte/lyte_start.js");
+    loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_start.js");
     reloadCSS_lyte();
 }
 
