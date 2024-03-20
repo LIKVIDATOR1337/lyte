@@ -10,26 +10,6 @@
 // @run-at document-idle
 // ==/UserScript==
 
-function cssElement(url) {
-  var link = document.createElement("link");
-  link.href = url;
-  link.rel="stylesheet";
-  link.type="text/css";
-  return link;
-}
-
-function loadScript(src) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = src;
-    script.async = true;
-    script.onload = () => resolve();
-    script.onerror = (error) => reject(error);
-    document.head.appendChild(script);
-  });
-}
-
 var scriptUrl = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_init.js']
 
 function loadAndInjectStyles(cssUrls) {
