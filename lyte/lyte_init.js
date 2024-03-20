@@ -1,11 +1,12 @@
 console.log("Lyte init...");
 
 function loadScript(url) {
-   fetch(url)
-     .then((response) => response.text())
-     .then((text) => eval(text))
-     .then(() => {
-  	});
+   //fetch(url)
+   //  .then((response) => response.text())
+   //  .then((text) => eval(text))
+   //  .then(() => {
+  //	});
+	console.log(url);
 } 
 
 function reloadCSS_lyte() {
