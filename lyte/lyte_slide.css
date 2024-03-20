@@ -73,11 +73,11 @@
    animation-delay: -54s;
 }
 .slider .slide:nth-child(11) {
-   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.9)), url('photos/syde.jpg');
+   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.9)), url('https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/syde.jpg');
    animation-delay: -60s;
 }
 .slider .slide:nth-child(12) {
-   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('photos/syde2.jpg');
+   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/syde2.jpg');
    animation-delay: -66s;
 }
 
