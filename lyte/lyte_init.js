@@ -35,14 +35,19 @@ function loadAndInjectStyles(cssUrls) {
 }
 
 function reloadCSS_lyte() {
-	document.querySelectorAll("link[rel=stylesheet]").forEach(link => {
-	    if (link.href.includes("lyte.css")) {
-	        link.href = link.href.replace(/\?.*|$/, "?" + Date.now());
-	    }
-		if (link.href.includes("lyte_fix.css")) {
-	        link.href = link.href.replace(/\?.*|$/, "?" + Date.now());
-	    }
-	});
+    var styleElements = document.getElementsByTagName('style');
+    for (var i = 0; i < styleElements.length; i++) {
+        var styleElement = styleElements[i];
+        if (styleElement.innerHTML.includes('/*LYTE CSS*/')) {
+            styleElement.parentNode.removeChild(styleElement);
+        }
+    }
+    if (localStorage.getItem('lyte_use_default_font') == 'false') {
+        var css = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css',
+                   'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_fix.css'];
+    }
+    else { var css = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css'] }
+    loadAndInjectStyles(css);
 }
 
 var slider = `
