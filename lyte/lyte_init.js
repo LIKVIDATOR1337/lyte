@@ -69,22 +69,9 @@ var nana = document.getElementById('win_0.form_name');
 if (document.getElementById('win_0')) {
     if (document.getElementById('win_0.form_name').innerText == "АВТОРИЗАЦІЯ КОРИСТУВАЧА")
     {
-    	console.log("first time.");
     	loadAndInjectStyles(['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_logon.css'])
-    	//document.head.insertAdjacentHTML('beforeend', `<link href="https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_logon.css" rel="stylesheet" type="text/css">`)
 		document.head.insertAdjacentHTML('beforeend', `<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap'); body {font-family:"Open Sans",sans-serif !important;font-optical-sizing: auto;}</style> `)
     }
 } else {
     loadAndInjectScripts(['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_start.js']);
-    //reloadCSS_lyte();
 }
-
-
-// const observer = new MutationObserver(() => {
-//     const targetElement = document.getElementById('win_0.form_name');
-//     if (targetElement.innerHTML == "АВТОРИЗАЦІЯ КОРИСТУВАЧА") {
-//     	console.log("first time.");
-//         observer.disconnect();
-//     }
-// });
-// observer.observe(document.body, { childList: true, subtree: true });

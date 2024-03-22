@@ -1,7 +1,5 @@
 console.log("[RESURRECTION LYTE]: Add-ins loaded!");
 
-reloadCSS_lyte();
-
 function getLocalStorageSize() {
   var total = 0;
   for (var key in localStorage) {
@@ -33,7 +31,6 @@ if (localStorage.getItem('lyte_use_default_font') !== null) { //if present
 	if (localStorage.getItem('lyte_use_default_font') == 'false') {
 		checkbox.checked = false;
         loadAndInjectStyles(['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_fix.css']);
-		//document.head.insertAdjacentHTML('beforeend', `<link href="http://127.0.0.1:8000/res/lyte/lyte_fix.css" rel="stylesheet" type="text/css">`)
 		document.head.insertAdjacentHTML('beforeend', `<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');body{font-family:"Open Sans",sans-serif !important;font-optical-sizing: auto;}</style> `)
 	}
 	else { checkbox.checked = true; }

@@ -9,9 +9,6 @@ scripts = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte
 	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js',
 	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js']
 loadAndInjectScripts(scripts)
-// loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_override.js");
-// loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js");
-// loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js");
 
 var dbg_btn = `
 	<button onclick="modal.showModal()">Settings</button>
