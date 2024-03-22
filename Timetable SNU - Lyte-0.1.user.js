@@ -39,16 +39,9 @@ function loadAndInjectScripts(scriptUrls) {
 }
 
 const cssUrls = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_slide.css', 'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css'];
-
 loadAndInjectStyles(cssUrls);
-//document.head.appendChild(cssElement("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_slide.css"));
-//document.head.appendChild(cssElement("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css"));
 
 (function() {
     'use strict';
-    //document.body.childNodes[4].remove(); //remove img
-    //loadScript("https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_init.js").then(() => {
-
-    //});
     loadAndInjectScripts(scriptUrl);
 })();
