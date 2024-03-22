@@ -52,7 +52,8 @@ if (localStorage.getItem('lyte_auto_unload_peerjs') !== null) { //if present
         checkbox.checked = true;
         peerjs = "";
         Peer = "";
-        MPeer = "";
+        MPeer = {};
+        MPeer.setIdPeer = function(){}
     }
     else { checkbox.checked = false; }
 
