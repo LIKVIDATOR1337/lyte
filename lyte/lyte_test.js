@@ -50,10 +50,6 @@ if (localStorage.getItem('lyte_auto_unload_peerjs') !== null) { //if present
     var isChecked = checkbox.checked;
     if (localStorage.getItem('lyte_auto_unload_peerjs') == 'true') {
         checkbox.checked = true;
-        var script = document.querySelector('script[src="js/moduls/peerjs.min.js?ver=4.0.0"]');
-        var script1 = document.querySelector('script[src="js/moduls/Peer.js?ver=4.0.0"]');
-        if (script) {script.parentNode.removeChild(script);}
-        if (script1) {script1.parentNode.removeChild(script1);}
         peerjs = "";
         Peer = "";
     }
