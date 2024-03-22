@@ -59,8 +59,8 @@ var settings_modal = `
   		<label class="switch"><input type="checkbox" id="lyte_auto_unload_peerjs"><span class="sw_slider"></span></label>
 	</div>
   <hr>
-  <button onclick="modal.close('lyte_settings')">Close</button>
-  <button onclick="reloadCSS_lyte()">Reload CSS</button>
+  <button onclick="modal.close('lyte_settings')">Закрыть</button>
+  <button onclick="reloadCSS_lyte()">Перезагрузить CSS</button>
 </dialog>
 `
 document.body.insertAdjacentHTML('beforeend', index);
