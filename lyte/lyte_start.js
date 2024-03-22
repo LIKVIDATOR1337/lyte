@@ -55,7 +55,7 @@ var settings_modal = `
 		<button id="remove_pfp" class="hyde_btn" onclick="lyte_DelPFP()">
 	</div>
 	<div class="settings_prop">
-  		<span class="l">Отлючить видеозвонки</span>
+  		<span class="l">Отключить видеозвонки</span>
   		<label class="switch"><input type="checkbox" id="lyte_auto_unload_peerjs"><span class="sw_slider"></span></label>
 	</div>
   <hr>
