@@ -46,7 +46,8 @@ function reloadCSS_lyte() {
         var css = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css',
                    'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_fix.css'];
     }
-    else { var css = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css'] }
+    else { var css = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css',
+                      'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_def_font.css'] }
     loadAndInjectStyles(css);
 }
 

@@ -1,0 +1,78 @@
+/*LYTE CSS*/
+/*LYTE Default font css*/
+
+#navigation { font-weight: unset !important; }
+
+#digital { font-weight: unset !important; left: -1px !important;}
+
+#numweek1 { margin-top:0px !important; }
+#numweek2 { font-size:15pt !important; padding-top:60px !important; }
+
+/*#weekCurrent { margin: 4px 0 5px 3px !important; font-size: 15pt !important; padding: 0 0 5px 0 !important; }
+#dayCurrent { margin: -48px 0 0 -5px !important; font-size: 66pt !important; }
+#monthCurrent { font-size:15pt !important; margin: 59px 0 0 -3px !important; }*/
+
+#navigation li div { background: #30303080 !important; }
+#navigation li div div { background: transparent !important; }
+
+.windows { background: #30303080 !important; box-shadow: none !important; }
+.buttonform:hover, .buttonnavigation:hover { box-shadow: none !important; cursor: pointer !important; }
+
+.caption { background: #30303080 !important; }
+.caption .form_name { color: #eee !important; text-shadow: none !important; }
+
+/*.container button[id*="butSession"] {
+    color: red !important;
+}*/
+
+.cap_but { background: unset !important; background-color: unset !important; 
+		   font-weight: unset !important; border-radius: 0px !important;
+		   text-shadow: none !important; color: #eee !important;
+		   border: 1px #eee !important;}
+
+.cap_but:hover { box-shadow: unset !important; }
+
+.quest { right: 44px !important; }
+.close:hover { right: 13px !important; }
+
+.container div { color: white !important; }
+.container .buttonform { color: #eeeeee !important; }
+
+.tr1 { background-color: #303030 !important; }
+.tr1 .tabPS[style*="font-weight:bold; padding-left:30px; background: #b4b8dacf;"] { background-color: #606060 !important; }
+
+.tabPS span[style*="text-decoration: underline; color: #062c99;"] { color: white !important; }
+
+.tabPS { color: white !important; border: 1px solid #606060 !important; }
+.tr2 { background-color: unset !important; }
+.tabPSC { color: white !important; border: 1px solid #606060 !important; }
+
+.tr1 div[style*="text-shadow: 3px 3px 3px #bba6dc;"] {text-shadow: none !important;}
+.container div[id*="containerTabl"] { border: 2px solid #606060 !important; }
+div.fixedTabl table { border: unset !important; }
+div.fixedTabl thead th { background-color: #606060 !important; color: white !important; }
+
+.tabsN .tabContent { background-color: #303030 !important; }
+.tabsN .active { border-bottom: unset !important; background-color: transparent !important; }
+
+
+/*Profile fixes*/
+#navigation li div img[title*="Деактивація користувача - F8"]
+{ cursor: pointer !important; }
+/*#navigation li div div [style*="position:absolute; top:173px;"]
+{ top:185px !important; }
+#navigation li div div [style*="position:absolute; top:173px; left: 70px;"]
+{ top:185px !important; left: 75px !important; }
+
+
+
+#login { top:380px !important; left:80px !important;  }
+
+#navigation li div div[style*="position:absolute; top:358px; left:21px; width:97%; text-align:left;"]
+{ top:375px !important; left:21px !important; }
+
+#navigation li div div[style*="position:absolute; top:388px; left:7px; width:97%; text-align:left;"]
+{ top:400px !important; left:7px !important; }
+#password { top:404px !important; left:80px !important; }
+
+#avtorize { top:385px !important; left:210px !important; }*/
