@@ -1,4 +1,4 @@
-console.log("[RESURRECTION LYTE]: Add-ins loaded!");
+console.log("[LYTE]: lyte_test loaded.");
 
 function getLocalStorageSize() {
   var total = 0;

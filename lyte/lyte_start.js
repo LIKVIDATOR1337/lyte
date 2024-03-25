@@ -5,7 +5,7 @@ var logo = document.querySelector('img[src="img/Caption_502.png"][style="width:7
 logo.remove();
 logo = undefined;
 
-scripts = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_override.js',
+scripts = [
 	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js',
 	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js']
 loadAndInjectScripts(scripts)
