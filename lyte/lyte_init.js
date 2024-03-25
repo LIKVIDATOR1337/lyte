@@ -12,7 +12,7 @@ var none_tuesday = [];
 var e_tuesday = [];
 
 function lyte_getTime() {
-    console.log("[RESURRECTION LYTE]: Getting time from api");
+    console.log("[LYTE]: Getting time from API");
     var a = {};
     a.param = "get_lessonTime";
     Modul_TT.XHR.query(a, Modul_TT.serverScript);

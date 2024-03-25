@@ -1,4 +1,4 @@
-console.log("LYTE: Welcome string loaded.");
+console.log("[LYTE]: Welcome string loaded.");
 
 let debug_time = "";
 let debug_day = ""
