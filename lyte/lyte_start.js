@@ -10,12 +10,8 @@ scripts = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte
 	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js']
 loadAndInjectScripts(scripts)
 
-var dbg_btn = `
-	<button onclick="modal.showModal()">Settings</button>
-`
-var debug_btn = ``;
-var debug = true
-if (debug == true) { debug_btn = dbg_btn }
+user_block = document.getElementById('infa_user'); 
+user_block.insertAdjacentHTML('beforeend', '<i class="nf nf-cod-settings_gear" onclick="modal.showModal()" style="position:relative; top:125px; left:285px; font-size: 32px;color: #eee;">'); 
 
 var index = `
 <div class="wrapper" style="z-index: 0;">
@@ -32,7 +28,6 @@ var index = `
 	      </div>
 	      <div class="footer-column e">
 	        Get Updates: <a href="https://github.com/LIKVIDATOR1337/lyte" target="_blank">GitHub</a>
-	        ${debug_btn}
 	      </div>
 	</footer>
 </div>
