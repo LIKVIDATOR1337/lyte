@@ -99,8 +99,6 @@ var slider = `
 
 document.body.insertAdjacentHTML('beforeend', slider);
 
-var nana = document.getElementById('win_0.form_name');
-
 if (document.getElementById('win_0')) {
     if (document.getElementById('win_0.form_name').innerText == "АВТОРИЗАЦІЯ КОРИСТУВАЧА")
     {

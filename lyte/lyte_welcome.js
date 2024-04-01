@@ -17,20 +17,16 @@ function welcome_string() {
 	if (day == "вівторок") { t_day = true }
 	if (t_day == true) { meetings = e_tuesday }
 	else { meetings = none_tuesday }
-	//console.log(wk)
 	let wel = document.getElementById('welcomestring');
 	for (let i = 0; i < meetings.length; i++) {
 	    const [meetingNumber, start, end] = meetings[i].split(" - ");
 	    
 	    if (wk >= start && wk <= end) {
-	        //console.log(`Meeting ${meetingNumber} is ongoing.`);
-	        //console.log(meetingNumber)
 	        if (meetingNumber == 'курат.год ') { wel.innerText = `Зараз йде кураторська година.` }
 	        else { wel.innerText = `Зараз йде ${meetingNumber} пара.` }
 	        break;
 	    } else if (wk < start) {
 	    	wel.innerText = `${meetingNumber} пара почнется о: ${start}`
-	        //console.log(`Meeting ${meetingNumber} is about to start at ${start}`);
 	        break;
 	    }
 	}

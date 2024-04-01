@@ -16,7 +16,7 @@
  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7));
  background-size: cover;
  background-position: center;
- animation: slider 60s infinite;
+ animation: slider 66s infinite;
 }
  
 .slider .slide:nth-child(1) {
