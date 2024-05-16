@@ -1,7 +1,7 @@
 var __version__ = '0.1';
 var cur_ver = document.body.childNodes[8].src.substr(44);
 
-var logo = document.querySelector('img[src="img/Caption_502.png"][style="width:730px; height:280px; position: absolute; bottom: 60px; right: 40px;"]');
+var logo = document.querySelector('img[src="img/Caption_503.png"][style="width:730px; height:280px; position: absolute; bottom: 60px; right: 40px;"]');
 logo.remove();
 logo = undefined;
 
