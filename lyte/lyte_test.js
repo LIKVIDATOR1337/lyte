@@ -1,16 +1,6 @@
 console.log("[LYTE]: lyte_test loaded.");
 
-function getLocalStorageSize() {
-  var total = 0;
-  for (var key in localStorage) {
-    var value = localStorage.getItem(key);
-    if (value != null) {
-      total += value.length;
-    }
-  }
-  totalkbytes = total / 1024
-  return console.log(`Size in KB: ${totalkbytes}`);
-}
+function getLocalStorageSize(){var total=0;for(var key in localStorage){var value=localStorage.getItem(key);if(value!=null){total+=value.length;}}return total/1024;}
 
 document.getElementById('lyte_use_default_font').addEventListener('click', function() {
 	var checkbox = document.getElementById('lyte_use_default_font');
