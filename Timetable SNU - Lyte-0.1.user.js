@@ -10,38 +10,35 @@
 // @run-at document-idle
 // ==/UserScript==
 
-var scriptUrl = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_init.js']
-
-function loadAndInjectStyles(cssUrls) {
-    cssUrls.forEach(url => {
+function loadAndInjectResources(urls) {
+    urls.forEach(url => {
         fetch(url)
             .then(response => response.text())
-            .then(cssText => {
-                const styleElement = document.createElement('style');
-                styleElement.textContent = cssText;
-                document.head.appendChild(styleElement);
+            .then(content => {
+                if (url.endsWith('.css')) {
+                    const styleElement = document.createElement('style');
+                    styleElement.textContent = content;
+                    document.head.appendChild(styleElement);
+                } else if (url.endsWith('.js')) {
+                    const scriptElement = document.createElement('script');
+                    scriptElement.textContent = content;
+                    document.head.appendChild(scriptElement);
+                } else {
+                    console.error(`Unsupported file type for ${url}`);
+                }
             })
             .catch(error => console.error(`Error loading ${url}: ${error}`));
     });
 }
 
-function loadAndInjectScripts(scriptUrls) {
-    scriptUrls.forEach(url => {
-        fetch(url)
-            .then(response => response.text())
-            .then(scriptText => {
-                const scriptElement = document.createElement('script');
-                scriptElement.textContent = scriptText;
-                document.head.appendChild(scriptElement);
-            })
-            .catch(error => console.error(`Error loading ${url}: ${error}`));
-    });
-}
+var localinject = false;
+var injecturl = '';
 
-const cssUrls = ['https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_slide.css', 'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte.css'];
-loadAndInjectStyles(cssUrls);
+injecturl = localinject ? 'http://127.0.0.1:8000' : 'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main';
+
+const resources = [`${injecturl}/lyte/lyte_init.js`,`${injecturl}/lyte/lyte_slide.css`, `${injecturl}/lyte/lyte.css`];
 
 (function() {
     'use strict';
-    loadAndInjectScripts(scriptUrl);
+    loadAndInjectResources(resources);
 })();

@@ -1,6 +1,9 @@
 /*LYTE CSS*/
 /*Lyte logon window*/
 
+body[style*="zoom: 0.8;"] {
+	zoom: 1 !important;
+}
 
 div[class*="button green"] {
     border: 1px solid #ccc !important;
@@ -15,8 +18,40 @@ div[class*="button green"] {
     font-family: "Open Sans",sans-serif !important;
 }
 
+div[id="win_0"][style*="width: 620px; height: 490px;"] {
+	height: 340px !important;
+}
+
+div[title*="натисніть для отримання на свою корпоративну пошту листа з параметрами доступу"] {
+	border: 1px solid #ccc;
+	background: #303030;
+	top: 57.5% !important;
+	color: #eee !important;
+	padding: 1.5%;
+	cursor: pointer;
+}
+
+img[src*="/img/Caption_503.png"][style*="position:fixed; left:145px; top:30px; width:300px; height:120px;"] {
+	left: 0% !important;
+	top: 12.5% !important;
+	width: 20% !important;
+	height: 30% !important;
+	content: url("https://snu.edu.ua/wp-content/uploads/2022/04/Logo.png");
+}
+
+span[style*='position:fixed; text-align:justify; font-family:"times new roman"; font-size:20px; left:14px; top:150px; width:590px; color:#155c6a'] {
+	position:fixed; 
+	text-align:justify;
+	font-size: unset !important; 
+	left:22% !important;
+	top:8.5% !important;
+	width:75% !important;
+	color:#BBB !important;
+	text-wrap: auto !important;
+}
+
 div[id*="win_0.button_run"] {
-	width: 85% !important;
+	width: 90.5% !important;
 	left: 15px !important;
 }
 
@@ -27,22 +62,24 @@ div[id*="win_1.container"] div {
 input[id*="win_0.login"] {
 	background-color: #30303099 !important;
 	color: #eee !important;
+	top: 50% !important;
 }
 input[id*="win_0.password"] {
 	background-color: #30303099 !important;
 	color: #eee !important;
+	top: 65% !important;
 }
-img[id*="win_0.cImg"] { background: #30303095 !important; }
+img[id*="win_0.cImg"] { background: #30303095 !important; top: 65.9% !important;}
 
 span[style*=' position:fixed; line-height: 0.9; font-family:"time new roman"; font-size:20px; left:50px; top:50px; color:#65808c    ']
 { color: #eee !important }
 span[style*=' position:fixed; font-family:"times new roman"; font-size:19px; left:50px; top:83px; color:#627B80    ']
 { color: #eee !important }
 
-span[style*=' position:fixed; left:30px; top:135px; font-size:20px; font-family:"arial";    ']
-{ color: #eee !important }
-span[style*=' position:fixed; left:15px; top:189px; font-size:20px; font-family:"arial";    ']
-{ color: #eee !important }
+span[style*='position:fixed; left:50px; top:310px; font-size:20px; font-family:"arial";']
+{ color: #eee !important; top: 52.5% !important; left: 3.5% !important; }
+span[style*='position:fixed; left:35px; top:365px; font-size:20px; font-family:"arial";']
+{ color: #eee !important; top: 67.5% !important; left: 3.5% !important; }
 
 div[style*=' position:fixed; line-height: 1.3; font-family:"time new roman";\n   				font-size:18pt; top:50px; color:#235b73;  width:93%;    ']   
 { color: #eee !important }

@@ -1,19 +1,24 @@
-var __version__ = '0.1';
-var cur_ver = document.body.childNodes[8].src.substr(44);
+var __version__ = '0.2';
+var cur_ver = document.body.querySelector('script[src*="js/System.js?ver="]').src.substr(46);
 
-var logo = document.querySelector('img[src="img/Caption_503.png"][style="width:730px; height:280px; position: absolute; bottom: 60px; right: 40px;"]');
+//Fix zoom property
+ListWin.zoom = 1.0;
+System.adaptationZoom();
+
+let logo = document.querySelector('img[src="img/Caption_503.png"][style="width:730px; height:280px; position: absolute; bottom: 60px; right: 40px;"]');
 logo.remove();
 logo = undefined;
 
-scripts = [
-	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_test.js',
-	'https://raw.githubusercontent.com/LIKVIDATOR1337/lyte/main/lyte/lyte_welcome.js']
-loadAndInjectScripts(scripts)
+let scripts = [
+	`${injecturl}/lyte/lyte_test.js`,
+	`${injecturl}/lyte/lyte_welcome.js`]
+loadAndInjectResources(scripts)
+scripts = undefined;
 
 user_block = document.getElementById('infa_user'); 
 user_block.insertAdjacentHTML('beforeend', '<i class="nf nf-cod-settings_gear" onclick="modal.showModal()" style="position:relative; top:125px; left:285px; font-size: 32px;color: #eee;">'); 
 
-var index = `
+let index = `
 <div class="wrapper" style="z-index: 0;">
 	<div class="main" >
 	  <div><h2 style="color: white;">Інформаційна система TimeTable</h2></div>
@@ -27,14 +32,14 @@ var index = `
 	        Resurrection Lyte - version ${__version__} : SNU TimeTable version ${cur_ver}
 	      </div>
 	      <div class="footer-column e">
-	        Get Updates: <a href="https://github.com/LIKVIDATOR1337/lyte" target="_blank">GitHub</a>
+	        Get Updates: <i class="nf nf-cod-github"></i> <a href="https://github.com/LIKVIDATOR1337/lyte" target="_blank"> GitHub</a>
 	      </div>
 	</footer>
 </div>
 `;
 
 
-var settings_modal = `
+let settings_modal = `
 <dialog class="lyte_settings_style" id="lyte_settings">
   <span class="settings_title">Настройки Lyte</span>
   <hr>
@@ -61,4 +66,24 @@ var settings_modal = `
 document.body.insertAdjacentHTML('beforeend', index);
 document.body.insertAdjacentHTML('beforeend', settings_modal);
 
+index = undefined;
+settings_modal = undefined;
+
 const modal = document.getElementById('lyte_settings');
+
+//Optimize UX
+
+//document.querySelector('div[title*="натисніть для отримання на свою корпоративну пошту листа з параметрами доступу"]');
+let sub_div = user_block.querySelector('div[style*="position:relative; top:-70px; width:97%; text-align:left;"]')
+sub_div.children[2].remove();
+Array.from(sub_div.querySelectorAll('span')).find(el => el.textContent.trim() === 'користувач:').remove();
+sub_div.querySelector('div[style*="padding-left: 60px; text-align: left; width: auto;"]').remove();
+sub_div.children[3].remove();
+let group_title = Array.from(sub_div.querySelectorAll('span')).find(el => el.textContent.trim() === 'група:');
+let groups = sub_div.querySelector('div[style*="padding-left: 60px; text-align: end; width:auto;"]');
+groups.style.paddingLeft = '';  // Removes inline padding-left
+groups.style.textAlign = '';    // Removes inline text-align
+groups.querySelectorAll('br').forEach(br => br.remove())
+if (groups.innerText.split("; ").length > 1) {
+	group_title.innerText = "групи:"
+}

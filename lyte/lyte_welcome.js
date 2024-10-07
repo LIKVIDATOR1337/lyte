@@ -1,12 +1,12 @@
 console.log("[LYTE]: Welcome string loaded.");
 
 let debug_time = "";
-let debug_day = ""
-
+let debug_day = "";
+lyte_getTime(); //Stop to attacking server.
 function welcome_string() {
 	t_day = null;
 	if (e_tuesday.length === 0) {
-  		lyte_getTime()
+  		return console.log("No time loaded.");
 	}
 	if (debug_time == "") { wk = System.digital.innerText.slice(0, 5); } 
 	else { 	wk = debug_time; }

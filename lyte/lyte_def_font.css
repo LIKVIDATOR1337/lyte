@@ -38,7 +38,7 @@
 .container div { color: white !important; }
 .container .buttonform { color: #eeeeee !important; }
 
-.tr1 { background-color: #303030 !important; }
+.tr1 { background-color: #30303080 !important; }
 .tr1 .tabPS[style*="font-weight:bold; padding-left:30px; background: #b4b8dacf;"] { background-color: #606060 !important; }
 
 .tabPS span[style*="text-decoration: underline; color: #062c99;"] { color: white !important; }
