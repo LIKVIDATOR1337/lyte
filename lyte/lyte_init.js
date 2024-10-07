@@ -101,6 +101,6 @@ if (document.getElementById('win_0')) {
 		document.head.insertAdjacentHTML('beforeend', `<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap'); @import url('https://www.nerdfonts.com/assets/css/webfont.css'); body {font-family:"Open Sans",sans-serif !important;font-optical-sizing: auto;}</style> `)
     }
 } else {
-    loadAndInjectResources([`${injecturl}/lyte/lyte_start.js`, `${injecturl}/lyte/indb.js`]);
+    loadAndInjectResources([`${injecturl}/lyte/lyte_start.js`]);
 }
 
